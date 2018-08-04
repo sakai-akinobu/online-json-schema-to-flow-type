@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "$(npm bin)/eslint pages/** components/**"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,12 @@
     "next": "^6.1.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.3.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-react": "^7.10.0"
   }
 }

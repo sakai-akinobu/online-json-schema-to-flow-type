@@ -1,1 +1,5 @@
-export default () => <div>JsonSchemaTextArea</div>
+import React from 'react';
+
+export default function JsonSchemaTextArea() {
+  return <div>JsonSchemaTextArea</div>;
+}
