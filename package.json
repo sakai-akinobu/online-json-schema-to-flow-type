@@ -29,6 +29,7 @@
     "json-schema-to-flow-type": "https://github.com/sakai-akinobu/json-schema-to-flow-type.git#693cce0",
     "next": "^6.1.1",
     "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },
