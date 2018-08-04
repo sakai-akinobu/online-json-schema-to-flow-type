@@ -5,6 +5,7 @@ import {Component} from 'react';
 import Header from '../components/Header';
 import JsonSchemaTextArea from '../components/JsonSchemaTextArea';
 import FlowTypeTextArea from '../components/FlowTypeTextArea';
+import Footer from '../components/Footer';
 import {parse} from '../utils/jsonSchemaToFlowType';
 import styles from './styles/index.scss';
 
@@ -39,6 +40,7 @@ export default class Index extends Component<void, State> {
           />
           <FlowTypeTextArea value={parse(jsonSchemaCode)} />
         </div>
+        <Footer />
       </div>
     );
   }
