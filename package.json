@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "$(npm bin)/eslint pages/** components/**",
+    "lint": "$(npm bin)/eslint pages/**/*.js components/**/*.js",
     "flow": "$(npm bin)/flow"
   },
   "repository": {
@@ -25,8 +25,10 @@
   },
   "homepage": "https://github.com/sakai-akinobu/online-json-schema-to-flow-type#readme",
   "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
     "json-schema-to-flow-type": "https://github.com/sakai-akinobu/json-schema-to-flow-type.git#693cce0",
     "next": "^6.1.1",
+    "node-sass": "^4.9.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },

@@ -5,6 +5,7 @@ import {Component} from 'react';
 import JsonSchemaTextArea from '../components/JsonSchemaTextArea';
 import FlowTypeTextArea from '../components/FlowTypeTextArea';
 import {parse} from '../utils/jsonSchemaToFlowType';
+import styles from './styles/index.scss';
 
 type State = {
   jsonSchemaCode: string,
@@ -28,7 +29,7 @@ export default class Index extends Component<void, State> {
     const {jsonSchemaCode} = this.state;
 
     return (
-      <div>
+      <div className={styles.container}>
         <JsonSchemaTextArea
           value={jsonSchemaCode}
           onChange={this.handleChangeJsonSchema}
