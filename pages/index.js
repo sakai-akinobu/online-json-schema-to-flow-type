@@ -4,6 +4,7 @@ import {Component} from 'react';
 
 import JsonSchemaTextArea from '../components/JsonSchemaTextArea';
 import FlowTypeTextArea from '../components/FlowTypeTextArea';
+import {parse} from '../utils/jsonSchemaToFlowType';
 
 type State = {
   jsonSchemaCode: string,
@@ -32,7 +33,7 @@ export default class Index extends Component<void, State> {
           value={jsonSchemaCode}
           onChange={this.handleChangeJsonSchema}
         />
-        <FlowTypeTextArea />
+        <FlowTypeTextArea value={parse(jsonSchemaCode)} />
       </div>
     );
   }

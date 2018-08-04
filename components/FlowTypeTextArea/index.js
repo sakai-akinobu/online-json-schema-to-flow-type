@@ -1,6 +1,11 @@
 // @flow
 import React from 'react';
 
-export default function FlowTypeTextArea() {
-  return <div>FlowTypeTextArea</div>;
+type Props = {
+  value: string,
+};
+
+export default function FlowTypeTextArea(props: Props) {
+  const {value} = props;
+  return <textarea value={value} readOnly={true} />;
 }

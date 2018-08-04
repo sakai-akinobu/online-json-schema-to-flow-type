@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/sakai-akinobu/online-json-schema-to-flow-type#readme",
   "dependencies": {
+    "json-schema-to-flow-type": "https://github.com/sakai-akinobu/json-schema-to-flow-type.git#693cce0",
     "next": "^6.1.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
