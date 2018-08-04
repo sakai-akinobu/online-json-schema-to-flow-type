@@ -2,6 +2,7 @@
 import React from 'react';
 import {Component} from 'react';
 
+import Header from '../components/Header';
 import JsonSchemaTextArea from '../components/JsonSchemaTextArea';
 import FlowTypeTextArea from '../components/FlowTypeTextArea';
 import {parse} from '../utils/jsonSchemaToFlowType';
@@ -29,12 +30,15 @@ export default class Index extends Component<void, State> {
     const {jsonSchemaCode} = this.state;
 
     return (
-      <div className={styles.container}>
-        <JsonSchemaTextArea
-          value={jsonSchemaCode}
-          onChange={this.handleChangeJsonSchema}
-        />
-        <FlowTypeTextArea value={parse(jsonSchemaCode)} />
+      <div>
+        <Header />
+        <div className={styles.container}>
+          <JsonSchemaTextArea
+            value={jsonSchemaCode}
+            onChange={this.handleChangeJsonSchema}
+          />
+          <FlowTypeTextArea value={parse(jsonSchemaCode)} />
+        </div>
       </div>
     );
   }
