@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/sakai-akinobu/online-json-schema-to-flow-type/issues"
   },
-  "homepage": "https://github.com/sakai-akinobu/online-json-schema-to-flow-type#readme"
+  "homepage": "https://github.com/sakai-akinobu/online-json-schema-to-flow-type#readme",
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
 }
