@@ -5,8 +5,11 @@ import {Component} from 'react';
 import Header from '../components/Header';
 import JsonSchemaTextArea from '../components/JsonSchemaTextArea';
 import FlowTypeTextArea from '../components/FlowTypeTextArea';
+import ValidationErrors from '../components/ValidationErrors';
 import Footer from '../components/Footer';
 import {parse} from '../utils/jsonSchemaToFlowType';
+import {validateSchema} from '../utils/jsonSchemaValidator';
+import tryParseToJson from '../utils/tryParseToJson';
 import styles from './styles/index.scss';
 
 type State = {
@@ -30,6 +33,12 @@ export default class Index extends Component<void, State> {
   render() {
     const {jsonSchemaCode} = this.state;
 
+    const jsonSchema = tryParseToJson(jsonSchemaCode);
+    let validationErrors = [];
+    if (jsonSchema) {
+      validationErrors = validateSchema(jsonSchema);
+    }
+
     return (
       <div>
         <Header />
@@ -40,6 +49,7 @@ export default class Index extends Component<void, State> {
           />
           <FlowTypeTextArea value={parse(jsonSchemaCode)} />
         </div>
+        <ValidationErrors errors={validationErrors} />
         <Footer />
       </div>
     );
