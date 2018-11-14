@@ -25,4 +25,4 @@ npm run export
 
 ## Demo
 
-https://silly-chandrasekhar-e51cc5.netlify.com/
+https://online-json-schema-to-flow-type.netlify.com
